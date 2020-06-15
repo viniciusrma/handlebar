@@ -1,0 +1,93 @@
+<!--
+
+Handlebars "If" block helper 
+If you want to check for a specific object property before you insert a value, Handlebars provides you with the {{if}} helper block. 
+The {{if}} helper is similar to the if conditional in JavaScript, but there is a difference in syntax:
+
+-->
+
+{{#if argument}}
+  // Code to include if the provided argument is truthy 
+{{/if}}
+
+<!--The opening {{#if}} expression and a closing {{/if}} expression.-->
+
+<!--
+
+Handlebars "else" section
+If that argument turns out to be falsy then you’ll just have a blank section in your HTML.
+Instead, you can add a default line of code by creating an else section, using Handlebar’s {{else}} expression.
+
+-->
+
+{{#if argument}}
+  // Code to include if the provided argument is truthy 
+{{else}}
+  // Code to include if the provided argument is falsy 
+{{/if}}
+
+<!--
+
+Handlebars "Each" and "This"
+Another helper that Handlebars offers is the {{each}} block which allows you to iterate through an array. 
+Just like the {{if}} block, there is an opening {{#each}} expression and closing {{/each}} expression. 
+Inside the {{each}} block, {{this}} acts as a placeholder for the element in the iteration.
+Take a look at the example below:
+
+-->
+
+{{#each someArray}}
+  <p>{{this}} is the current element!</p>
+{{/each}}
+
+<!-- 
+
+This {{each}} block would be paired with an array like this in JavaScript:
+
+const context = {
+  someArray: ['First', 'Second', 'Third'] 
+}
+
+After compiling, the HTML will look like:
+
+-->
+
+<p>First is the current element!</p>
+<p>Second is the current element!</p>
+<p>Third is the current element!</p>
+
+<!--
+Using {{this}} also gives you access to the properties of the element being iterated over.
+
+For instance, if you’re using the following array inside the context object:
+
+const context = {
+  someArray: [
+    {shape: 'Triangle'},
+    {shape: 'Circle'},
+    {shape: 'Square'}
+  ] 
+}
+
+-->
+
+{{#each someArray}}
+  <p>The current shape is: {{this.shape}}!</p>
+{{/each}}
+
+<!--
+
+After going through the steps of compiling, the finished HTML will look like:
+
+-->
+
+<p>The current shape is: Triangle!</p>
+<p>The current shape is: Circle!</p>
+<p>The current shape is: Square!</p>
+
+<!-- 
+
+{{if}} and {{each}} can be used together.
+This creates a conditional that needs to be met to define what will appear in the HTML
+
+-->
