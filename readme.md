@@ -1,5 +1,5 @@
 <h1  align="center">
-  <img src="<img src="https://i.ibb.co/K2VMXpD/ama-filminho.png" alt="ama-filminho" border="0">" alt="logo" border="0">
+  <img src="https://i.ibb.co/h1KkGTL/logo.png" alt="logo" border="0">
 </h1>
   
 ## 📍 Index
