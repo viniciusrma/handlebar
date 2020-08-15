@@ -40,7 +40,7 @@ I hope this is useful for you as it is for me.
 
 ```sh
 
-$ git clone https://github.com/viniciusrma/nlw.git
+$ git clone https://github.com/viniciusrma/handlebar
 
 ```
 
